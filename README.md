@@ -17,10 +17,16 @@ This project demonstrates the core concept of **Integrity** within the CIA Triad
     * `[CHANGED]` File Modified (Integrity Compromised)
     * `[DELETED]` File Removed
 
-## 🛠️ Technology Stack
-* **Language:** Python 3
-* **Environment:** Kali Linux (Compatible with Windows/macOS)
-* **Libraries:** `os`, `hashlib`, `time`
+## 🛠️ Tools & Technologies Used
+* **Core Language:** Python 3
+* **Operating System:** Kali Linux (Virtual Machine)
+* **Encryption Standard:** SHA-512 Hashing Algorithm
+* **Version Control:** Git & GitHub
+* **Text Editor:** Nano (CLI based editing)
+* **Python Libraries:**
+    * `hashlib`: For generating cryptographic signatures.
+    * `os`: For interacting with the operating system file paths.
+    * `time`: For controlling the monitoring loop intervals.
 
 ## 📸 Screenshots
 
