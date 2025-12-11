@@ -86,3 +86,18 @@ This project demonstrates the core concept of **Integrity** within the CIA Triad
 
 5. **Verify Alerts**
    While the script is running, open a second terminal and modify, add, or delete files in the `Target` folder. You will see real-time alerts in the monitoring window.
+
+---
+
+<div align="center">
+
+  <p>
+    If you found this project useful, please consider giving it a <strong>Star</strong> ⭐<br>
+    I am always open to connecting and discussing Cybersecurity opportunities!
+  </p>
+
+  <a href="https://www.linkedin.com/in/bikasha-gurung-082290288" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect_with_Me-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" />
+  </a>
+
+</div>
