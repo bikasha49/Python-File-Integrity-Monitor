@@ -66,7 +66,7 @@ This project demonstrates the core concept of **Integrity** within the CIA Triad
     I am always open to connecting and discussing Cybersecurity opportunities!
   </p>
 
-  <a href="https://www.linkedin.com/in/bikasha-gurung-082290288" target="_blank">
+  <a href="https://www.linkedin.com/in/bikasha-gurung" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect_with_Me-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" />
   </a>
 
