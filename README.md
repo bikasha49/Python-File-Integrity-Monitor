@@ -1,71 +1,91 @@
-# 🛡️ Python File Integrity Monitor (FIM)
+## Python File Integrity Monitor
 
-> **Role:** Cybersecurity Analyst Portfolio Project 
-> **Concept:** Integrity Monitoring & Intrusion Detection
+### Project Overview
+This project implements a File Integrity Monitoring system using Python.
+It detects unauthorized file changes by comparing current file hashes against a trusted baseline.
+The project demonstrates core defensive security concepts used in SOC environments.
+### Workflow Diagram 
+<p align="left">
+  <img src="https://github.com/bikasha49/python_file_integrity_monitor/blob/eba1bf311ad936367f736f6428f0a45c0a870ae4/images/execution_flow_chart.png" width="60%" style="margin-left:60%;">
+</p>
 
-## 📌 Project Overview
-A custom-built **File Integrity Monitor (FIM)** developed in Python. This tool monitors a target directory for unauthorized changes, creating a baseline of file hashes (SHA-512) and continuously checking for modifications, creations, or deletions.
+### Project Objective
+* Demonstrate hands on understanding of file integrity monitoring.
+* Show how baseline driven hash comparison detects malicious or unauthorized changes.
+* Practice a SOC style monitoring and alerting workflow using Python.
 
-This project demonstrates the core concept of **Integrity** within the CIA Triad, a fundamental principle of Security Operations Center (SOC) activities.
+### Security Capabilities Demonstrated
+* File integrity monitoring fundamentals.
+* Baseline creation and validation.
+* Detection of file modification events.
+* Detection of file creation events.
+* Detection of file deletion events.
+* Practical defensive security logic.
 
-## 🚀 Features
-* **SHA-512 Hashing:** Uses robust cryptographic hashing to fingerprint files (significantly more secure than MD5).
-* **Baseline Creation:** Generates a "known-good" state of the target directory to identify deviations.
-* **Real-Time Monitoring:** Continuously scans for unauthorized changes in an infinite loop.
-* **Granular Alerting:** Distinguishes between three types of incidents:
-    * `[NEW]` File Created
-    * `[CHANGED]` File Modified (Integrity Compromised)
-    * `[DELETED]` File Removed
+### How It Works
+* The tool scans a target directory.
+* It generates SHA256 hashes for each file.
+* It stores these hashes as a trusted baseline.
+* It continuously monitors the directory for changes.
+* It compares current file hashes against the baseline.
+* It alerts when differences are detected.
 
-## 🛠️ Tools & Technologies Used
-* **Core Language:** Python 3
-* **Operating System:** Kali Linux (Virtual Machine)
-* **Encryption Standard:** SHA-512 Hashing Algorithm
-* **Version Control:** Git & GitHub
-* **Text Editor:** Nano (CLI based editing)
-* **Python Libraries:**
-    * `hashlib`: For generating cryptographic signatures.
-    * `os`: For interacting with the operating system file paths.
-    * `time`: For controlling the monitoring loop intervals.
+### Detected Security Events
+* Modified files
+* Newly created files
+* Deleted files
 
-### 1. Real-Time Detection ("The Money Shot")
-*The FIM detects a file modification instantly as it happens. The split-screen view shows the attack commands (left) and the automated detection (right).*
-### ![Real Time Alerts](https://github.com/bikasha49/Python-File-Integrity-Monitor/raw/6751b2acf466efd1dcdd418ba972c903e7f3d611/demo.png)
+### Environment
+* Operating system Kali Linux
+* Programming language Python 3
+* Hashing algorithm SHA256
 
-### 2. Baseline Creation
-*Establishing the initial "Known Good" state. The script calculates SHA-512 hashes for all target files to create a fingerprint.*
-### ![Baseline Collection](https://github.com/bikasha49/Python-File-Integrity-Monitor/raw/6751b2acf466efd1dcdd418ba972c903e7f3d611/Baseline.png)
+### Project Structure
+* baseline.txt stores trusted file hashes
+* fim.py main monitoring script
+* Target directory monitored for file changes
 
-## 💻 How to Run
+### Usage
+* Run the script.
+* Select option A to collect a baseline.
+* Modify files inside the Target directory.
+* Run the script again.
+* Select option B to start monitoring.
+* Observe real time detection alerts.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/bikasha49/Python-File-Integrity-Monitor.git
+### Screenshots and Evidence
+This section provides execution proof of the monitoring workflow.
+Each screenshot demonstrates a real security outcome produced by the tool.
 
-2. **Navigate to the directory:**
-   ```bash
-   cd Python-File-Integrity-Monitor
-3. **Run the script:**
-   ```bash
-   python3 fim.py
-4. **Initialize the Baseline**
-   Select **Option A**. The script will calculate the hash of every file in the `Target` folder and save it to `baseline.txt`. This teaches the tool what "normal" looks like.
+#### Baseline Creation:
+Shows successful generation of trusted file hashes.
+<p align="left">
+  <img src="https://github.com/bikasha49/python_file_integrity_monitor/blob/eba1bf311ad936367f736f6428f0a45c0a870ae4/images/screenshot_fim_baseline_collected.png" width="60%" style="margin-left:60%;">
+</p>
 
-5. **Start Monitoring**
-   Select **Option B**. The tool will load the saved baseline and begin continuously checking files for changes.
+#### Monitoring Started:
+Shows the tool running in active monitoring mode using the saved baseline.
+<p align="left">
+  <img src="https://github.com/bikasha49/python_file_integrity_monitor/blob/eba1bf311ad936367f736f6428f0a45c0a870ae4/images/screenshot_fim_monitoring_started.png" width="60%" style="margin-left:60%;">
+</p>
 
-5. **Verify Alerts**
-   While the script is running, open a second terminal and modify, add, or delete files in the `Target` folder. You will see real-time alerts in the monitoring window.
+#### Integrity Alerts Detected:
+Shows detection of file modification creation and deletion events.
+<p align="left">
+  <img src="https://github.com/bikasha49/python_file_integrity_monitor/blob/eba1bf311ad936367f736f6428f0a45c0a870ae4/images/screenshot_fim_monitoring_results.png" width="60%" style="margin-left:60%;">
+</p>
 
----
+### Potential Improvements
+* Log security alerts to a file for audit and review.
+* Implement ignore rules for specific file types or directories.
+* Add configuration file support for flexible deployment.
+* Integrate email or webhook notifications for alert delivery.
+
 
 <div align="center">
-
-  <p>
-    If you found this project useful, please consider giving it a <strong>Star</strong> ⭐<br>
-    I am always open to connecting and discussing Cybersecurity opportunities!
+   <p> 
+I am always open to connecting and discussing Cybersecurity opportunities!
   </p>
-
   <a href="https://www.linkedin.com/in/bikasha-gurung" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect_with_Me-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" />
   </a>
